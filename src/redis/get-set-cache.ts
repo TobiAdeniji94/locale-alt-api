@@ -1,6 +1,6 @@
 import client from './redis';
-
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 const REDIS_EXPIRATION = process.env.REDIS_EXPIRATION as string;

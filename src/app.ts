@@ -22,7 +22,7 @@ app.use(cors());
 app.use("/documentation", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use('/auth', rateLimiter, authRouter)
-app.use('/location', rateLimiter, locationRouter)
+app.use('/locale', rateLimiter, locationRouter)
 
 app.get('/', (req: Request, res: Response): void => {
     res.send("Welcome to Locale. Locale is a developer tool for anyone needing geographical information about Nigeria. Its API provides details on Nigeria's regions, states, and local government areas (LGAs). It's a useful tool for businesses targeting Nigeria's population of over 200M.")

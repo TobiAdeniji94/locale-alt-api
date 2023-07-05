@@ -13,11 +13,6 @@ async function signup(req: Request, res: Response): Promise<void | string> {
         const foundUser = await userModel.findOne({ email });
         const API_key = generateApiKey(32)
 
-        // if (password !== retype_password) {
-        //     res.status(400).send("Passwords do not match");
-        //     return;
-        // }
-
         if (foundUser) {
             res.status(409).send("User already exists, try logging in");
             API_key
@@ -42,7 +37,7 @@ async function signup(req: Request, res: Response): Promise<void | string> {
         await key.save();
 
         res.status(201).json({
-            message: "Signup successful. Welcome",
+            message: "Signup successful",
             user: {
                 email,
                 firstname,

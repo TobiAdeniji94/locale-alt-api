@@ -1,3 +1,4 @@
+"use strict";
 /**
  * @swagger
  * definitions:
@@ -14,10 +15,9 @@
  *       API_key_id:
  *         type: string
  */
-
 /**
  * @swagger
- * /auth/registration:
+ * /auth/signup:
  *   post:
  *     summary: Registers a new user
  *     tags:
@@ -54,8 +54,7 @@
  *       409:
  *         description: User already exists
  */
-exports.signupDoc = {} 
-
+exports.signupDoc = {};
 /**
  * @swagger
  * /auth/login:
@@ -93,9 +92,7 @@ exports.signupDoc = {}
  *       404:
  *         description: User does not exist.
  */
-exports.verifyDoc = {}
-
-
+exports.verifyDoc = {};
 /**
  * @swagger
  * definitions:
@@ -140,10 +137,9 @@ exports.verifyDoc = {}
  *       known_for:
  *           type: Array
  */
-
 /**
  * @swagger
- * /locale/region:
+ * /location/region:
  *   get:
  *     summary: Get regions based on the provided region name
  *     security:
@@ -169,11 +165,10 @@ exports.verifyDoc = {}
  *       404:
  *         description: Region not found
  */
-exports.regionsDoc = {}
-
+exports.regionsDoc = {};
 /**
  * @swagger
- * /locale/state:
+ * /location/state:
  *   get:
  *     summary: Get states based on the provided state name
  *     security:
@@ -199,11 +194,10 @@ exports.regionsDoc = {}
  *       404:
  *         description: State not found
  */
-exports.stateDoc = {}
-
+exports.stateDoc = {};
 /**
  * @swagger
- * /locale/lga:
+ * /location/lga:
  *   get:
  *     summary: Get local governments based on the provided LGA name
  *     security:
@@ -224,5 +218,4 @@ exports.stateDoc = {}
  *       404:
  *         description: Local Government not found
  */
-exports.lgaDoc = {}
-
+exports.lgaDoc = {};

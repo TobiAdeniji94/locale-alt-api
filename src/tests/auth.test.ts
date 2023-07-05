@@ -26,7 +26,7 @@ describe('Authentication Controller', () => {
     // Assert the response
     expect(res.status).toHaveBeenCalledWith(201);
     expect(res.json).toHaveBeenCalledWith({
-      message: 'Signup successful. Welcome',
+      message: 'Signup successful',
       user: {
         email: 'test@example.com',
         firstname: 'John',
