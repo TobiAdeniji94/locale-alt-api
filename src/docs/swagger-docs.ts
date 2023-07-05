@@ -54,7 +54,7 @@
  *       409:
  *         description: User already exists
  */
-exports.signupDoc = {} 
+exports.signupDoc = {}
 
 /**
  * @swagger
