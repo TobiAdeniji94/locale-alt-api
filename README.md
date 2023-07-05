@@ -18,7 +18,7 @@ Locale includes the following information for each region, state, and LGA:
 Locale is a valuable resource for diverse purposes, including population analysis, linguistic diversity study, cultural exploration, and administrative planning. Researchers can utilize its dataset to understand Nigerian culture and linguistic diversity across regions and states. It provides a comprehensive overview of Nigeria's geographical entities, facilitating easy access to structured information on regions, states, and LGAs.
 
 ## Base URL
-[Locale](put rendered url here)
+[Locale](https://locale-alt-api.onrender.com)
 
 ## Getting Started
 
@@ -54,35 +54,3 @@ The Locale API offers the following endpoints for integrating geographical data:
 3. Get Local Government: `/lgas`
 
    This endpoint enables you to fetch the data of a specific Local Government Area (LGA) or retrieve information about all LGAs.
-
-### API Usage
-
-To test the API on your local machine with Swagger, use the following URL: localhost:3000/documentation
-
-The API requires bearer token authorization. Include your API key in the Authorization header as follows:
-
-Here is an example of how to use the API:
-### **Signup
-- Route /auth/registration
-- Method: POST
-- Body:
-```
-{
-    "email": "email@gmail.com",
-    "password": "*****",
-    "firstname":"first name",
-    "lastname": "last name",
-}
-```
-- Response
-```
-{
-    "message": "Signup successful",
-    "user": {
-        "email": "your@gmail11.com",
-        "firstname": "tobi",
-        "lastname": "adeniji"
-    },
-    "API_key": "API_KEY"
-}
-```
