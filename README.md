@@ -1,5 +1,5 @@
 # LOCALE
-Locale is a developer tool for anyone needing geographical information about Nigeria. Its API provides details on Nigeria's regions, states, and local government areas (LGAs). It's a useful tool for businesses targeting Nigeria's population of over 200M
+Locale is a developer tool for anyone needing geographical information about Nigeria. This API details Nigeria's regions, states, and local government areas (LGAs). It's a useful tool for businesses targeting Nigeria's population of over 200M
 
 # Built With
 Node.js, Express, MongoDB, Redis and TypeScript
@@ -8,8 +8,8 @@ Node.js, Express, MongoDB, Redis and TypeScript
 
 Locale includes the following information for each region, state, and LGA:
 
-- **Name**: The name of the region, state, or LGA.
-- **Landmass**: The land area covered by the region, state, or LGA, typically measured in square kilometers or square miles.
+- **Name**: The region, state, or LGA name.
+- **Landmass**: The land area covered by the region, state, or LGA, typically measured in square kilometers or miles.
 - **Population**: The total number of inhabitants residing in the region, state, or LGA.
 - **Dialect**: The primary language or dialect spoken by the people in the region, state, or LGA.
 - **Other Relevant Information**: Additional details that are pertinent to the specific region, state, or LGA, which may include cultural aspects, historical significance, or notable landmarks.
