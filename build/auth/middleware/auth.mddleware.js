@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g = Object.create((typeof Iterator === "function" ? Iterator : Object).prototype);
+    return g.next = verb(0), g["throw"] = verb(1), g["return"] = verb(2), typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
@@ -36,39 +36,38 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.authMiddleware = void 0;
+exports.authMiddleware = authMiddleware;
 var api_keys_model_1 = require("../../models/api-keys.model");
 function authMiddleware(req, res, next) {
     return __awaiter(this, void 0, void 0, function () {
-        var authHeader, key;
-        var _this = this;
+        var authHeader, key, error_1;
         return __generator(this, function (_a) {
-            authHeader = req.headers.authorization;
-            if (!authHeader) {
-                return [2 /*return*/, res.status(401).send('Missing Authorization header')];
+            switch (_a.label) {
+                case 0:
+                    authHeader = req.headers.authorization;
+                    if (!authHeader) {
+                        res.status(401).send('Missing Authorization header'); // Send response and exit middleware
+                        return [2 /*return*/]; // Ensure no further execution
+                    }
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 3, , 4]);
+                    return [4 /*yield*/, api_keys_model_1.apiKeyModel.findOne({ "API_key": authHeader })];
+                case 2:
+                    key = _a.sent();
+                    if (key === null) {
+                        res.status(401).send('Invalid API Key'); // Send response and exit middleware
+                        return [2 /*return*/]; // Ensure no further execution
+                    }
+                    // If the API key is valid, continue to the next middleware
+                    next();
+                    return [3 /*break*/, 4];
+                case 3:
+                    error_1 = _a.sent();
+                    res.status(401).send('Invalid API Key'); // Send response on error and exit middleware
+                    return [3 /*break*/, 4];
+                case 4: return [2 /*return*/];
             }
-            try {
-                key = function () { return __awaiter(_this, void 0, void 0, function () {
-                    var key;
-                    return __generator(this, function (_a) {
-                        switch (_a.label) {
-                            case 0: return [4 /*yield*/, api_keys_model_1.apiKeyModel.findOne({ "API_key": authHeader })];
-                            case 1:
-                                key = _a.sent();
-                                if (key === null) {
-                                    throw new Error('Invalid API_key');
-                                }
-                                return [2 /*return*/, key];
-                        }
-                    });
-                }); };
-                next();
-            }
-            catch (error) {
-                res.status(401).send('Invalid API Key');
-            }
-            return [2 /*return*/];
         });
     });
 }
-exports.authMiddleware = authMiddleware;

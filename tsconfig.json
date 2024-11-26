@@ -15,7 +15,9 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitThis": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "typeRoots": ["node_modules/@types"],
   }, 
-    "include": ["src", "tests"]
+    "include": ["src", "tests"],
+    "exclude": ["node_modules", "build"]
 }

@@ -22,9 +22,9 @@ app.use(express_1.default.urlencoded({ extended: false }));
 app.use((0, cors_1.default)());
 app.use("/documentation", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swaggerSpec));
 app.use('/auth', rate_limiter_1.rateLimiter, auth_route_1.default);
-app.use('/location', rate_limiter_1.rateLimiter, locale_route_1.default);
+app.use('/locale', rate_limiter_1.rateLimiter, locale_route_1.default);
 app.get('/', function (req, res) {
-    res.send("Welcome to Locale. Locale is a developer tool for anyone needing geographical information about Nigeria. Its API provides details on Nigeria's regions, states, and local government areas (LGAs). It's a useful tool for businesses targeting Nigeria's population of over 200M.");
+    res.send("Welcome to Locale. Locale is a developer tool for anyone needing geographical information about Nigeria. It's an API that details Nigeria's regions, states, and local government areas (LGAs). It's a useful tool for businesses targeting Nigeria's population of over 200M.");
 });
 var port = process.env.PORT || 3000;
 app.listen(port, function () {

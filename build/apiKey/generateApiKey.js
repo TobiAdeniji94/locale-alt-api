@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateApiKey = void 0;
+exports.generateApiKey = generateApiKey;
 function generateApiKey(length) {
     var characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     var randomString = '';
@@ -10,4 +10,3 @@ function generateApiKey(length) {
     }
     return randomString;
 }
-exports.generateApiKey = generateApiKey;

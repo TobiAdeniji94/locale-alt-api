@@ -1,2 +1,53 @@
+# Environment Variables
 .env
-node_modules
+
+# Node Modules
+node_modules/
+
+# Build Output
+build/
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Debug and Test Coverage
+coverage/
+*.lcov
+
+# Temporary Files
+temp/
+.tmp/
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Editor/IDE Specific
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.tsbuildinfo
+
+# Jest Cache and Test Output
+.jest/
+jest/
+jest-report.json
+
+# Miscellaneous
+*.bak
+*.orig
+
+# OS-Specific Files
+*.DS_Store
+*.Spotlight-V100
+.Trashes
+
+# TypeScript
+*.tsbuildinfo

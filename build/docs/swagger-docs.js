@@ -17,7 +17,7 @@
  */
 /**
  * @swagger
- * /auth/signup:
+ * /auth/registration:
  *   post:
  *     summary: Registers a new user
  *     tags:
@@ -139,7 +139,7 @@ exports.verifyDoc = {};
  */
 /**
  * @swagger
- * /location/region:
+ * /locale/region:
  *   get:
  *     summary: Get regions based on the provided region name
  *     security:
@@ -168,7 +168,7 @@ exports.verifyDoc = {};
 exports.regionsDoc = {};
 /**
  * @swagger
- * /location/state:
+ * /locale/state:
  *   get:
  *     summary: Get states based on the provided state name
  *     security:
@@ -197,7 +197,7 @@ exports.regionsDoc = {};
 exports.stateDoc = {};
 /**
  * @swagger
- * /location/lga:
+ * /locale/lga:
  *   get:
  *     summary: Get local governments based on the provided LGA name
  *     security:

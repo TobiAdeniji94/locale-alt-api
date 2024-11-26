@@ -12,7 +12,7 @@ var RATE_LIMIT_TIME = process.env.RATE_LIMIT_TIME;
 exports.rateLimiter = (0, express_rate_limit_1.default)({
     windowMs: parseInt(RATE_LIMIT_TIME),
     max: parseInt(RATE_LIMIT_MAX),
-    message: "You have exceeded 50 request limit, limit will expire in 2hrs",
+    message: "You have exceeded 25 request limit, limit will expire in 2hrs",
     standardHeaders: false,
     legacyHeaders: false,
 });

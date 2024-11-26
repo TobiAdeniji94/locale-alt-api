@@ -5,7 +5,7 @@ import { userModel } from '../models/auth.model';
 import * as bcrypt from 'bcrypt';
 
 
-async function signup(req: Request, res: Response): Promise<void | string> {
+async function signup(req: Request, res: Response): Promise<void> {
     const regex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b/;
     const { email, password, firstname, lastname } = req.body;
 
