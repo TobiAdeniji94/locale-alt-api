@@ -21,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use("/documentation", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+
 app.use('/auth', rateLimiter, authRouter)
 app.use('/locale', rateLimiter, locationRouter)
 

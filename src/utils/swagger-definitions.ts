@@ -1,7 +1,9 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-const WEB_HOST = process.env.WEB_HOST
+const WEB_HOST = process.env.WEB_HOST?.startsWith('http')
+    ? process.env.WEB_HOST.replace(/https?:\/\//, '')
+    : process.env.WEB_HOST
 
 export const swaggerDefinition = {
     swaggerDefinition: {
