@@ -12,7 +12,7 @@ export const swaggerDefinition = {
             version: '1.0.0',
             description: 'API consisting of endpoints to signup, verify user and API key and get locations by the regions, states and local government areas',
         },
-        host: WEB_HOST,
+        // host: WEB_HOST,
         basePath: '/',
         securityDefinitions: {
             ApiKeyAuth: {
